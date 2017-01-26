@@ -1,4 +1,4 @@
-This is the public key for Fábio Santos, ffsantos92@gmail.com.
+This is the public key for Albano Drazhi, albano dot drazhi at gmail dot com.
 
 Key fingerprint: 3C14 D280 A611 CC65 305D ABEA CED8 63E0 B028 F82E
 Key long ID    :                               CED8 63E0 B028 F82E

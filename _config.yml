@@ -8,15 +8,15 @@ gems:
 permalink:           /blog/:title.html
 
 # Setup
-title:               'Fábio Santos'
-description:         'Personal website of Fábio Santos, Software Engineer.'
-url:                 https://www.fabiosantos.me
+title:               'Albano Drazhi'
+description:         'Personal website of Albano Drazhi, Security Software Engineer.'
+url:                 https://www.albanodrazhi.me
 
 # About/contact
 author:
-  name:              Fábio Santos
-  url:               https://twitter.com/ffsantos92
-  email:             ffsantos92@gmail.com
+  name:              Albano Drazhi
+  url:               https://twitter.com/aldrazhi
+  email:             albano.drazhi@gmail.com
 
 # Custom vars
 version:             1.0.0
