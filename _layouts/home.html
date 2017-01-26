@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    <div class="wrap">
+        {% include masthead.html %}
+
+        <div class="container content">
+            <div class="container-home">
+                <div class="left">
+                    {{ content }}
+                </div>
+                <div class="right">
+                    <h3>Hello, world!</h3>
+                    <div class="sidebar-content">
+                        <img class="home-photo" alt="Fábio's photo" src="{{ site.url }}/img/me.jpg" />
+                        <p>I'm <strong>Fábio Santos</strong>, a 24 years old <strong>Software Engineer.</strong> Check my <a href="{{ site.url }}/about/">resume</a>.</p>
+                        <p>
+                            Besides my professional life, i'm a amateur traveler, big sports player, musicaholic and political activist.
+                        </p>
+                        <p>
+                            I'm always looking for good opportunities to work with smart people on awesome projects, so feel free to email me.
+                        </p>
+                        <p class="text-center">
+                            <i class="fa fa-envelope-o"></i> <a href="mailto:ffsantos92@gmail.com">ffsantos92@gmail.com</a> <br>
+                            <i class="fa fa-key"></i> <a href="/pgp.txt">PGP Key</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% include footer.html %}
+        </div>
+    </div>
+    {% include css.html %}
+    {% include analyticstracking.html %}
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         rouge
+gems:
+  - jekyll-redirect-from
+
+# Permalinks
+permalink:           /blog/:title.html
+
+# Setup
+title:               'Fábio Santos'
+description:         'Personal website of Fábio Santos, Software Engineer.'
+url:                 https://www.fabiosantos.me
+
+# About/contact
+author:
+  name:              Fábio Santos
+  url:               https://twitter.com/ffsantos92
+  email:             ffsantos92@gmail.com
+
+# Custom vars
+version:             1.0.0
