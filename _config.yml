@@ -10,7 +10,7 @@ permalink:           /blog/:title.html
 # Setup
 title:               'Albano Drazhi'
 description:         'Personal website of Albano Drazhi, Security Software Engineer.'
-url:                 https://www.albanodrazhi.me
+url:                 http://www.albanodrazhi.me
 
 # About/contact
 author:
