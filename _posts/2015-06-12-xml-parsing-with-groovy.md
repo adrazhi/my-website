@@ -11,8 +11,8 @@ The XML used for this example contains a list of consumers:
 def xml = """
 <consumers>
     <consumer>
-        <name>Fábio Santos</name>
-        <email>fabio@example.com</email>
+        <name>Albano Drazhi</name>
+        <email>example@domain.com</email>
     </consumer>
     <consumer>
         <name>John Doe</name>
