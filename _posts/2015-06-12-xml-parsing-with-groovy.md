@@ -25,7 +25,7 @@ def xml = """
 Let's assume that you want to check if a consumer exists by matching an email:
 
 {% highlight groovy %}
-def email_to_match = "fabio@example.com"
+def email_match = "albano@example.com"
 {% endhighlight %}
 
 So, just parse XML and return `true` if the consumer's email exists in the XML:
