@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="well">
+{%for post in site.posts %}
+    {% unless post.next %}
+        <h2>{{ post.author }}</h2>
+        <ul>
+    {% else %}
+        {% capture author %}{{ post.author}}{% endcapture %}
+        {% capture nauthor %}{{ post.next.author}}{% endcapture %}
+        {% if author != nauthor %}
+            </ul>
+            <h2>{{ post.author }}</h2>
+            <ul>
+        {% endif %}
+    {% endunless %}
+    <li><span>{{ post.date | date: "%Y %b %d" }}</span>» <a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</div>

@@ -1,0 +1,84 @@
+---
+#Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+
+// Our variables
+$base-font-family: FiraCodeRegular, 'Share Tech Mono', Monospace, Courier;
+$archive-line-font-family: FiraCodeLight, Monaco,"Courier New",monospace;
+$nav-font-family: FiraCodeMedium, "Montserrat",sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #c8c8c8;
+$background-color: #1e2327;
+$brand-color:      #fff;
+
+$grey-color:       rgba(255,255,255,0.75);
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+$black-color:	   #1e2327;
+
+$link-color:       #fff;
+
+$header-color:     rgba(255,255,255,0.75);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting"
+;
+
+/*
+ * FONT DEFINITION
+*/
+
+@font-face { 
+	font-family: FiraCodeRegular; 
+	src: url('../fonts/FiraCode-Regular.ttf'); 
+}
+
+@font-face { 
+	font-family: FiraCodeLight; 
+	src: url('../fonts/FiraCode-Light.ttf'); 
+}
+
+@font-face { 
+	font-family: FiraCodeMedium; 
+	src: url('../fonts/FiraCode-Medium.ttf'); 
+}
+
+@font-face { 
+	font-family: FiraCodeBold; 
+	src: url('../fonts/FiraCode-Bold.ttf'); 
+}
