@@ -1,19 +1,27 @@
 ---
 layout: default
 ---
+<div class="post">
+  <br>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }} 
+			<small>by {{ page.author }} 
+			{% if page.githubuser %}
+			<a href="https://github.com/{{ page.githubuser }} " title="Github">
+					<img width="19px" height="19px" src="/images/github.png"/>
+			</a>
+			{% endif %}
+			{% if page.twitteruser %}
+			<a href="https://twitter.com/{{ page.twitteruser }}" title="Twitter">
+					<img width="19px" height="19px" src="/images/twitter.png"/>
+				</a>
+			{% endif %}
+			</small>
+		</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
 
-<div itemscope itemtype="http://schema.org/Article" class="post">
-
-  <div class="post-header">
-    <h1 itemprop="name" class="post-title">{{ page.title }}</h1>
-  </div>
-  <hr>
-  <div class="post-description">
-    <span>By <a href="/about/" title="About me"><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Albano Drazhi</span></span></a></span> |
-    <time itemprop="datePublished" content="{{page.date | date: "%Y-%m-%d"}}" datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%B %e, %Y" }}</time>
-  </div>
-  <article itemprop="articleBody">
+  <article class="post-content">
     {{ content }}
   </article>
 </div>
-

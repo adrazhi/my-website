@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-{% if page.lang == "pt" %}<html lang="pt">{% else %}<html lang="en">{% endif %}
+<html>    
+  {% include head.html %}
 
-{% include head.html %}
-
-<body>
-  <div class="wrap">
-      {% include masthead.html %}
-    <div class="container content">
-      {{ content }}
-
-      {% include footer.html %}
+  <body>
+    {% include header.html %}
+    <br>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </div>
-  </div>
-  {% include css.html %}
-  {% include analyticstracking.html %}
-</body>
+    
+    {% include footer.html %}
+    
+  </body>
+
 </html>

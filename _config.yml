@@ -1,22 +1,18 @@
-# Dependencies
-markdown:            redcarpet
-highlighter:         rouge
-gems:
-  - jekyll-redirect-from
+# Site settings
+title: BootArchive
+motto: Random Tales of Informatics Engineering
+email: tbd@tbd.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://bootarchive.github.io" # the base hostname & protocol for your site
+twitter_username: bootarchive
+github_username:  bootarchive
 
-# Permalinks
-permalink:           /blog/:title.html
+# Build settings
+markdown: kramdown
 
-# Setup
-title:               'Albano Drazhi'
-description:         'Albano Drazhi'
-url:                 albanodrazhi.me
-
-# About/contact
-author:
-  name:              Albano Drazhi
-  url:               https://twitter.com/aldrazhi
-  email:             albano.drazhi@gmail.com
-
-# Custom vars
-version:             1.0.0
+sass:
+    sass_dir: _sass
