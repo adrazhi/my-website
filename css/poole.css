@@ -380,6 +380,7 @@ tbody tr:nth-child(odd) th {
     margin-bottom: 1rem;
     border-top: 5px solid #424242;
     border-bottom: 1px solid #E8E8E8;
+    float: left;
     min-height: 56px;
     position: relative;
 }
@@ -410,6 +411,7 @@ tbody tr:nth-child(odd) th {
 }
 
 .masthead-nav a {
+    float: left;
     margin-left: 0px;
 }
 
