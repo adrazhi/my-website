@@ -5,13 +5,13 @@ title: home
 
 <div class="post">
     <div class="posts">
-        <h3>Recent posts</h3>
-        {% for post in site.posts limit:5 %}
-        <hr>
         <div class="about">
             <p>I'm a Software and Security Engineer who cares about using the best practices to build great products and services.</p>
             <p>I'm always looking for good opportunities to work with smart and highly motivated people on awesome projects, so feel free to <a href="mailto:albano.drazhi@gmail.com">email me.</a></p>
         </div>
+        <hr>
+        <h3>Recent posts</h3>
+        {% for post in site.posts limit:5 %}
         <hr>
         <div class="post">
             <h4 class="post-title-home">
