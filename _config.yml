@@ -1,0 +1,22 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         rouge
+gems:
+  - jekyll-redirect-from
+
+# Permalinks
+permalink:           /blog/:title.html
+
+# Setup
+title:               'Albano Drazhi'
+description:         'Albano Drazhi'
+url:                 albanodrazhi.me
+
+# About/contact
+author:
+  name:              Albano Drazhi
+  url:               https://twitter.com/aldrazhi
+  email:             albano.drazhi@gmail.com
+
+# Custom vars
+version:             1.0.0
