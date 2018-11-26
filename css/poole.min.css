@@ -55,7 +55,6 @@ tbody tr:nth-child(odd) th{background-color:#f9f9f9;}
 .masthead-title a{color:#505050;}
 .masthead-title small{font-size:75%;font-weight:400;color:#c0c0c0;letter-spacing:0;}
 .masthead-nav {float: left; line-height: 56px; font-size: 16px; margin-left: -10px;}
-.masthead-nab {float: right; line-height: 56px; font-size: 16px;}
 .masthead-nav a{margin-left:10px;}
 @media (max-width:30em){.masthead-title{float:left;text-align:center;}
 .masthead-nav{float:left;text-align:center;};}
@@ -90,6 +89,6 @@ a.pagination-item:hover{background-color:#f5f5f5;}
 .footer-copyright{font-size:.65em;float:left;}
 .footer-social{font-size:1.5em !important;float:right;}
 @media (max-width:30em){.footer-copyright{float:none;}
-.footer-social{float:none;text-align:center;padding-top:10px;};}
+.footer-social{float:left;text-align:center;padding-top:10px;};}
 .social-icon{color:#CCC !important;}
 .social-icon:hover{color:#515151 !important;}
