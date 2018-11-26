@@ -56,7 +56,7 @@ tbody tr:nth-child(odd) th{background-color:#f9f9f9;}
 .masthead-title small{font-size:75%;font-weight:400;color:#c0c0c0;letter-spacing:0;}
 .masthead-nav{float:right;line-height:56px;font-size:16px;}
 .masthead-nav a{margin-left:10px;}
-@media (max-width:30em){.masthead-title{float:none;text-align:center;}
+@media (max-width:30em){.masthead-title{float:left;text-align:center;}
 .masthead-nav{float:left;text-align:center;};}
 .post-header{text-align:center;}
 .page-title,
