@@ -22,7 +22,7 @@ def xml = """
 """
 {% endhighlight %}
 
-Let's assume that you want to check if a consumer exists by matching an email:
+Let's assume that you want to check if a consumer exists by matching a given email:
 
 {% highlight groovy %}
 def email_match = "albano@example.com"
