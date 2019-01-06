@@ -3,8 +3,6 @@ layout: post
 title: Jackson Deserialization Remote Code Execution
 ---
 
-# Jackson Deserialization Remote Code Execution
-
 ## Background
 
 Jackson is an open source Java serialization and deserialization tool that serializes Java objects into xml or json format strings, or deserializes them back to corresponding objects. Because of its ease of use, it is faster and does not depend on it. 
