@@ -1,43 +1,46 @@
 ---
 layout: post
-title: XML Parsing with Groovy
+title: Jackson Deserialization Remote Code Execution
 ---
 
-[Groovy](http://www.groovy-lang.org) is a powerful, optionally typed and dynamic language and in this post i will show how easily you can parse XML by using a few lines of code. So, let's do it.
+# Jackson Deserialization Remote Code Execution
 
-The XML used for this example contains a list of consumers:
+## Background
 
-{% highlight groovy %}
-def xml = """
-<consumers>
-    <consumer>
-        <name>Albano Drazhi</name>
-        <email>example@domain.com</email>
-    </consumer>
-    <consumer>
-        <name>John Doe</name>
-        <email>john@example.com</email>
-    </consumer>
-</consumers>
-"""
-{% endhighlight %}
+Jackson is an open source Java serialization and deserialization tool that serializes Java objects into xml or json format strings, or deserializes them back to corresponding objects. Because of its ease of use, it is faster and does not depend on it. 
 
-Let's assume that you want to check if a consumer exists by matching an email:
+## Vulnerability Trigger Chain
 
-{% highlight groovy %}
-def email_match = "albano@example.com"
-{% endhighlight %}
+`getOutputProperties() → newTransFormer() → newInstance()`
 
-So, just parse XML and return `true` if the consumer's email exists in the XML:
 
-{% highlight groovy %}
-def consumers = new XmlParser().parseText(xml)
+## Construction method
+The serialized malicious attack code is constructed by the serialization method of the third-party inventory in the Java ecosystem , and the malicious code base64 is encoded and stitched into a well-constructed json data packet. If the code layer is using the `ObjectMapper` object instance 
+`(ObjectMapper mapper) = new ObjectMapper () ;)` Open the enableDefaultType property (such as `mapper.enableDefaultTyping ();)`, will automatically call the third-party library deserialization method for the incoming JSON in readValue, resulting in code execution.
 
-for (consumer in consumers) {
-    if (email_to_match.equals(consumer.email.text())) {
-        return true
-    }
-}
+# Official repair method
+After the vulnerabilities were generated, the official blacklisted banned code execution vulnerabilities caused by the deserialization problem of third-party libraries in the blacklist.
 
-return false
-{% endhighlight %}
+The blacklist is as follows:
+
+	org.apache.commons.collections.functors.InvokerTransformer 
+	org.apache.commons.collections.functors.InstantiateTransformer 
+	org.apache.commons.collections4.functors.InvokerTransformer 
+	org.apache.commons.collections4.functors.InstantiateTransformer 
+	org.codehaus.groovy. runtime.ConvertedClosure 
+	org.codehaus.groovy.runtime.MethodClosure 
+	org.springframework.beans.factory.ObjectFactory 
+	com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl
+
+
+# The emergence of new vulnerabilities (CVE-2017-17485)
+It is well known that blacklists are an unreliable fix. Attackers can often bypass the blacklist by some means, causing the vulnerability.
+
+Security researchers have found that Spring spel can be abused by Jackson-databind to execute arbitrary commands with `enableDefaultTyping()` turned on.
+
+
+
+#Repair Suggestion
+
+- Disable the `enableDefaultTyping()` method;
+- Filter or type check the JSON data passed in by the client.
